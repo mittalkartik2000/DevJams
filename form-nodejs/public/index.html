@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+     <!--external css-->
+     <link rel="stylesheet" href="style-main.css">
+     <!--external js-->
+     <script src="main.js"></script>
+</head>
+<body>
+     <!--navigation-->
+     <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand" href="#"> <i class="fas fa-globe-africa"></i></a>
+            <strong class="mr-auto name">SmartGuide</strong>
+    </nav>
+    <br>
+    <div class="container-fluid">
+            <div id="fixed">
+            </div>
+    </div>
+    <div class="jumbotron">
+        <form method="POST" action="/post-feedback">
+        <div class="row">
+            <div class="col-md-4">
+                <label>Budget: </label>
+                <i class="far fa-money-bill-alt"></i>
+                <input type="number" name="client-budget" required>
+            </div>
+            <div class="col-md-4">
+                    <label>Destination:</label>
+                    <i class="fas fa-globe-africa"> </i>
+                    <input type="text" name="client-destination" required>
+            </div>
+            <div class="col-md-4">
+                    <label>Mode Of Travel: </label>
+                    <i class="fas fa-bus"></i>
+                    <input type="text" name="client-mode" required>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+                <div class="col-md-4">
+                        <label>Quarter:</label>
+                        <i class="fas fa-calendar-alt"></i>    
+                        <input type="Date" name="client-Date" required>
+                </div>
+                <div class="col-md-4">
+                        <label>Duration: </label>
+                        <i class="fas fa-clock"></i>
+                        <input type="number" name="client-duration" required>
+                </div>
+                <div class="col-md-4">
+                        <label>Destination-Specification:</label>
+                        <i class="fas fa-cloud-sun"></i>
+                        <textarea name="specification" rows="1"></textarea>
+                </div>
+        </div> 
+        <br>    
+        <button type="submit" value="Submit" class="btn btn-primary" id="search">Search </button>
+        <button type="submit" class="btn btn-warning" id="view">View Feedbacks </button>
+    </form>
+    </div>
+</body>
+</html>
